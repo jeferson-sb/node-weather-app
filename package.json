@@ -1,0 +1,19 @@
+{
+  "name": "node-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js -e js,hbs"
+  },
+  "keywords": [],
+  "author": "Jeferson",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "node-fetch": "^2.6.0"
+  }
+}
