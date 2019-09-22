@@ -1,7 +1,10 @@
 ## A weather app made usign the Dark Sky API & MapBox API for Geocoding.
 
+### Demo : [https://jeferson-weather-app.herokuapp.com/](https://jeferson-weather-app.herokuapp.com/)
+
 ## Prerequisites
-* Node v8 or higher
+
+- Node v8 or higher
 
 1 - Create an account on Mapbox and Darksky.net
 
@@ -12,6 +15,11 @@
 Obs: Rename env.example to .env
 
 ## Quick Start
-> npm i
-> 
-> npm start
+
+```
+$ npm install
+```
+
+```
+$ npm start
+```
