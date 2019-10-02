@@ -15,6 +15,9 @@
 Obs: Rename env.example to .env
 
 ## Quick Start
+```
+$ git clone https://github.com/jeferson-sb/node-weather-app.git && cd node-weather-app
+```
 
 ```
 $ npm install
