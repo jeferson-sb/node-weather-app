@@ -1,20 +1,22 @@
-const router = require('express').Router();
-const geocode = require('./services/geocode');
-const forecast = require('./services/forecast');
+import { Router } from 'express'
+import geocode from './services/geocode.js'
+import forecast from './services/forecast.js'
 
-router.get('/', (req, res) => {
+const router = Router()
+
+router.get('/', (_req, res) => {
   res.render('home', {
     pageTitle: 'Home Page'
   });
 });
 
-router.get('/about', (req, res) => {
+router.get('/about', (_req, res) => {
   res.render('about', {
     pageTitle: 'About Page'
   });
 });
 
-router.get('/help', (req, res) => {
+router.get('/help', (_req, res) => {
   res.render('help', {
     pageTitle: 'Help Page'
   });
@@ -51,4 +53,4 @@ router.use((req, res) => {
   });
 });
 
-module.exports = router;
+export default router;

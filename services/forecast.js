@@ -1,13 +1,9 @@
-const fetch = require('node-fetch');
-
-// https://openweathermap.org/current
-const darksky_url = process.env.DARKSKY_URL;
+import fetch from "node-fetch";
 
 const forecast = async (latitude, longitude) => {
+  const darksky_url = process.env.DARKSKY_URL;
   try {
     const url = `${darksky_url}/${latitude},${longitude}`;
-    console.log(url);
-
     const res = await fetch(url);
     const data = await res.json();
 
@@ -15,11 +11,9 @@ const forecast = async (latitude, longitude) => {
       throw new Error('Unable to find location');
     }
 
-    let content = `${data.daily.data[0].summary} It is currently ${
-      data.currently.temperature
-    } degrees out. There is a ${
-      data.currently.precipProbability
-    }% chance of rain`;
+    let content = `${data.daily.data[0].summary} It is currently ${data.currently.temperature
+      } degrees out. There is a ${data.currently.precipProbability
+      }% chance of rain`;
 
     return content;
   } catch (error) {
@@ -27,4 +21,4 @@ const forecast = async (latitude, longitude) => {
   }
 };
 
-module.exports = forecast;
+export default forecast

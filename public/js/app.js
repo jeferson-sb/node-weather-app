@@ -25,7 +25,6 @@ weatherForm.addEventListener('submit', e => {
         </div>
       `;
     } else {
-      console.log(data);
       html = `
       <div class="card">
         <div class="card-content">

@@ -1,9 +1,9 @@
-const fetch = require('node-fetch');
-
-const mapbox_url = process.env.MAPBOX_URL;
-const mapbox_token = process.env.MAPBOX_TOKEN;
+import fetch from "node-fetch";
 
 const geocode = async addr => {
+  const mapbox_token = process.env.MAPBOX_TOKEN;
+  const mapbox_url = process.env.MAPBOX_URL;
+
   try {
     const url = `${mapbox_url}/${encodeURIComponent(
       addr
@@ -32,4 +32,4 @@ const geocode = async addr => {
   }
 };
 
-module.exports = geocode;
+export default geocode
